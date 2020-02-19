@@ -1,4 +1,4 @@
-# Algebra-with-python
+# Algebra With Python
 This repository contains the code accompanying the book Algebra With Python. Specifcally it contains the script
 `alegrab.py`. 
 
