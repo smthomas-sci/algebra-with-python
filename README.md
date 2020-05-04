@@ -2,6 +2,8 @@
 This repository contains the code accompanying the book Algebra With Python. Specifcally it contains the script
 `algebra.py`. 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FmU1C9lS7VQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 If using an interactive IPython, Jupyter or QTconsole session, it should begin as follows:
 
 ```python
