@@ -107,7 +107,7 @@ def div(num):
                     return eq
                     
                     
- def swap():
+def swap():
     """
     Swaps the sides of the equation
     """
@@ -116,7 +116,34 @@ def div(num):
         eq = Eq(eq.args[1], eq.args[0])
         return eq                   
                     
-                                 
+def cancel_exp(num):
+    """
+    Cancels the n-th exponentiated term by taking the n-th root
+    on the opposite side.
+    """
+    global eq
+    comps = []
+    for arg in eq.args:
+        if isinstance(arg, Pow):
+            comps.append(arg.args[0])
+        else:
+            comps.append(root(arg, num))
+    eq = Eq(comps[0],comps[1])
+    return eq
+
+def cancel_root(num):
+    """
+    Cancels the n-th root term by exponentiating the opposited by n.
+    """
+    global eq
+    comps = []
+    for arg in eq.args:
+        if isinstance(arg, Pow):
+           comps.append(arg.args[0])
+        else:
+            comps.append(arg**num)
+    eq = Eq(comps[0],comps[1])
+    return eq
 
 ```
 
